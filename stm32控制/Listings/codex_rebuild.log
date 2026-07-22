@@ -1,0 +1,91 @@
+*** Using Compiler 'V6.16', folder: 'D:\MDK\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+User/stm32f10x_it.c(25): warning: no previous extern declaration for non-static variable 'bt_rx_edge_count' [-Wmissing-variable-declarations]
+volatile uint32_t bt_rx_edge_count = 0;
+                  ^
+User/stm32f10x_it.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t bt_rx_edge_count = 0;
+         ^
+User/stm32f10x_it.c(125): warning: no previous prototype for function 'EXTI15_10_IRQHandler' [-Wmissing-prototypes]
+void EXTI15_10_IRQHandler(void)
+     ^
+User/stm32f10x_it.c(125): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void EXTI15_10_IRQHandler(void)
+^
+static 
+User/stm32f10x_it.c(133): warning: no previous prototype for function 'USART3_IRQHandler' [-Wmissing-prototypes]
+void USART3_IRQHandler(void)
+     ^
+User/stm32f10x_it.c(133): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART3_IRQHandler(void)
+^
+static 
+3 warnings generated.
+compiling stm32f10x_it.c...
+compiling track.c...
+compiling myusart.c...
+compiling mybt.c...
+compiling misc.c...
+compiling ultrasonic.c...
+User/mycar.c(1): warning: In file included from...D:/MDK/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(8347): warning: In file included from..../User\stm32f10x_conf.h(33): warning: In file included from..../Lib/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+1 warning generated.
+compiling mycar.c...
+compiling k210_uart.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_md.s...
+User/main.c(336): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+1 warning generated.
+compiling main.c...
+Lib/src/stm32f10x_exti.c(22): warning: In file included from..../Lib/inc\stm32f10x_exti.h(75): warning: padding size of 'EXTI_InitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+1 warning generated.
+compiling stm32f10x_exti.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_gpio.c...
+D:/MDK/Packs/Keil/STM32F1xx_DFP/2.4.0/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...D:/MDK/Packs/Keil/STM32F1xx_DFP/2.4.0/RTE_Driver/GPIO_STM32F10x.h(246): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  return (GPIOx->IDR);
+  ~~~~~~  ~~~~~~~^~~
+D:/MDK/Packs/Keil/STM32F1xx_DFP/2.4.0/RTE_Driver/GPIO_STM32F10x.c(128): warning: integer constant not in range of enumerated type 'GPIO_CONF' [-Wassign-enum]
+      conf &= ~1;
+              ^
+D:/MDK/Packs/Keil/STM32F1xx_DFP/2.4.0/RTE_Driver/GPIO_STM32F10x.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg &= ~(0xF << (num << 2));
+       ~~ ^~~~~~~~~~~~~~~~~~~~
+D:/MDK/Packs/Keil/STM32F1xx_DFP/2.4.0/RTE_Driver/GPIO_STM32F10x.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg |= ((conf << 2) | mode) << (num << 2);
+       ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+compiling GPIO_STM32F10x.c...
+compiling stm32f10x_rcc.c...
+Lib/src/stm32f10x_usart.c(1043): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  itmask = ((uint16_t)0x01 << (uint16_t)bitpos);
+         ~  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling stm32f10x_usart.c...
+Lib/src/stm32f10x_tim.c(22): warning: In file included from..../Lib/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Lib/src/stm32f10x_tim.c(725): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+             TIM_BDTRInitStruct->TIM_Break | TIM_BDTRInitStruct->TIM_BreakPolarity |
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+Lib/src/stm32f10x_tim.c(1982): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+Lib/src/stm32f10x_tim.c(2012): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCNE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+Lib/src/stm32f10x_tim.c(2057): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp1 = CCER_CCE_Set << (uint16_t)TIM_Channel;
+       ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=10034 RO-data=730 RW-data=8 ZI-data=3864  
+FromELF: creating hex file...
+".\Objects\neo.axf" - 0 Error(s), 16 Warning(s).
+Build Time Elapsed:  00:00:02

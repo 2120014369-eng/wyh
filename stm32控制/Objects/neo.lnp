@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\stm32f10x_it.o"
+".\objects\myusart.o"
+".\objects\mycar.o"
+".\objects\ultrasonic.o"
+".\objects\track.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+".\objects\misc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_usart.o"
+".\objects\stm32f10x_tim.o"
+".\objects\stm32f10x_iwdg.o"
+".\objects\stm32f10x_exti.o"
+".\objects\gpio_stm32f10x.o"
+--strict --scatter ".\Objects\neo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\neo.map" -o .\Objects\neo.axf
